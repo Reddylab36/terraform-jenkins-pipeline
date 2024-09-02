@@ -1,6 +1,6 @@
 resource "aws_vpc" "my-vpc" {
   # ... other instance properties (e.g., ami, instance_type)
-  vpc_id = "vpc-03836a7fb1e1336eb"  # Replace with the actual VPC ID
+  vpc_id = var.vpc_id  # Replace with the actual VPC ID
 }
 resource "aws_instance" "public_instance" {
  ami           = var.ami
