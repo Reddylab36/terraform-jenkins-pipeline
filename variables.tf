@@ -34,3 +34,9 @@ variable "name_tag" {
    description = "Name of the EC2 instance"
    default     = "My EC2 Instance"
 }
+
+variable "vpc_id" {
+   type        = string
+   description = "vpc_id"
+   default     = "vpc-03836a7fb1e1336eb"
+}
