@@ -1,6 +1,12 @@
-resource "aws_vpc" "my-vpc" {
-  # ... other instance properties (e.g., ami, instance_type)
-  vpc_id = var.vpc_id  # Replace with the actual VPC ID
+resource "aws_vpc" "myvpc" {
+  cidr_block = var.cidr
+}
+
+resource "aws_subnet" "pub-subnet3" {
+  vpc_id                  = aws_vpc.myvpc.id
+  cidr_block              = "198.162.0.0/16"
+  availability_zone       = "us-east-1a"
+  map_public_ip_on_launch = true
 }
 resource "aws_instance" "public_instance" {
  ami           = var.ami
