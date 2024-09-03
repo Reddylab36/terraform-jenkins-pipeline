@@ -1,3 +1,6 @@
+variable "cidr" {
+  default = "192.162.0.0/16"
+}
 variable "aws_access_key" {
   description = "AWS access key"
   type        = string
